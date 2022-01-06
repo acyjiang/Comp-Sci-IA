@@ -1,0 +1,12 @@
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\bin\Debug\Comp Sci IA.exe.config
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\bin\Debug\Comp Sci IA.exe
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\bin\Debug\Comp Sci IA.pdb
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.AssemblyReference.cache
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.Start.resources
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.Properties.Resources.resources
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.GenerateResource.cache
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.CoreCompileInputs.cache
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.exe
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.pdb
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.Main.resources
+C:\Users\s412011\source\repos\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.ImportExistingFile.resources
