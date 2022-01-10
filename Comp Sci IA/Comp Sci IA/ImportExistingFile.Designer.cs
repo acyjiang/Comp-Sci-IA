@@ -126,6 +126,7 @@ namespace Comp_Sci_IA
             this.Controls.Add(this.lblImportFile);
             this.Name = "ImportExistingFile";
             this.Text = "Import";
+            this.Load += new System.EventHandler(this.ImportExistingFile_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

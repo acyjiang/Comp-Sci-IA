@@ -31,7 +31,7 @@ namespace Comp_Sci_IA
         {
             this.btnPreviewMode = new System.Windows.Forms.Button();
             this.btnOpenStart = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtMain = new System.Windows.Forms.RichTextBox();
             this.lblFileName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,13 +56,13 @@ namespace Comp_Sci_IA
             this.btnOpenStart.UseVisualStyleBackColor = false;
             this.btnOpenStart.Click += new System.EventHandler(this.btnReturnToStart_Click);
             // 
-            // richTextBox1
+            // txtMain
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(27, 68);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(745, 218);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.txtMain.Location = new System.Drawing.Point(27, 68);
+            this.txtMain.Name = "txtMain";
+            this.txtMain.Size = new System.Drawing.Size(745, 218);
+            this.txtMain.TabIndex = 3;
+            this.txtMain.Text = "";
             // 
             // lblFileName
             // 
@@ -80,12 +80,13 @@ namespace Comp_Sci_IA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtMain);
             this.Controls.Add(this.btnOpenStart);
             this.Controls.Add(this.btnPreviewMode);
             this.Controls.Add(this.lblFileName);
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +95,7 @@ namespace Comp_Sci_IA
         #endregion
         private System.Windows.Forms.Button btnPreviewMode;
         private System.Windows.Forms.Button btnOpenStart;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtMain;
         private System.Windows.Forms.Label lblFileName;
     }
 }

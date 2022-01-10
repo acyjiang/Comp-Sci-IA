@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Comp_Sci_IA
 {
-    public partial class ImportExistingFile : Form
+    public partial class ImportExistingFile : Form 
     {
 
         String _file = String.Empty;
@@ -20,7 +20,7 @@ namespace Comp_Sci_IA
             InitializeComponent();
         }
 
-        private void ImportExistingFile_Load(object sender, EventArgs e)
+        private void ImportExistingFile_Load_1(object sender, EventArgs e)
         {
             SetControls();
         }
@@ -46,22 +46,30 @@ namespace Comp_Sci_IA
             this.Dispose();
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main mainFile = new Main();
-            mainFile.ShowDialog();
-            this.Dispose();
-        }
-
         private void btnOpenFileDialog_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
+
+            openFile.Filter = "PDF (*.pdf)|*.pdf" + "|" +
+                                "TXT (*.txt)|*.txt" + "|" +
+                                "RTF (*.rtf)|*.rtf" + "|" +
+                                "All Files (*.*)|*.*";
+
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 _file = openFile.FileName;
                 this.txtFileName.Text = _file;
             }
         }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main mainFile = new Main();
+            mainFile.mainText = System.IO.File.ReadAllText(@_file);
+            mainFile.ShowDialog();
+            this.Dispose();
+        }
+
     }
 }
