@@ -37,5 +37,10 @@ namespace Comp_Sci_IA
         {
             this.Dispose();
         }
+
+        private void btnReturnToEditor_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

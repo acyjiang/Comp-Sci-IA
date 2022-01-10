@@ -12,9 +12,33 @@ namespace Comp_Sci_IA
 {
     public partial class ImportExistingFile : Form
     {
+
+        String _file = String.Empty;
+
         public ImportExistingFile()
         {
             InitializeComponent();
+        }
+
+        private void ImportExistingFile_Load(object sender, EventArgs e)
+        {
+            SetControls();
+        }
+
+        private void SetControls()
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+
+            this.lblImportFile.Text = "Import File";
+            this.btnImport.Text = "Import";
+            this.lblAcceptableTypes.Text = "Acceptable File Types: pdf, txt, rtf";
+            this.btnOpenFileDialog.Text = "...";
+            this.btnClose.Text = "Close";
+
+            this.txtFileName.Text = String.Empty;
+            this.txtFileName.Enabled = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -33,7 +57,11 @@ namespace Comp_Sci_IA
         private void btnOpenFileDialog_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                _file = openFile.FileName;
+                this.txtFileName.Text = _file;
+            }
         }
     }
 }
