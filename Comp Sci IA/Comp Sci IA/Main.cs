@@ -16,5 +16,13 @@ namespace Comp_Sci_IA
         {
             InitializeComponent();
         }
+
+        private void btnReturnToStart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Start startForm = new Start();
+            startForm.ShowDialog();
+            this.Show();
+        }
     }
 }

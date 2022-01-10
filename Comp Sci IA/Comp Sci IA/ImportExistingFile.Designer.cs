@@ -31,7 +31,7 @@ namespace Comp_Sci_IA
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.lblImportFile = new System.Windows.Forms.Label();
-            this.lblAcceptable = new System.Windows.Forms.Label();
+            this.lblAcceptableTypes = new System.Windows.Forms.Label();
             this.btnImport = new System.Windows.Forms.Button();
             this.lblFile = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
@@ -60,15 +60,15 @@ namespace Comp_Sci_IA
             this.lblImportFile.TabIndex = 4;
             this.lblImportFile.Text = "Import File";
             // 
-            // lblAcceptable
+            // lblAcceptableTypes
             // 
-            this.lblAcceptable.AutoSize = true;
-            this.lblAcceptable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAcceptable.Location = new System.Drawing.Point(281, 87);
-            this.lblAcceptable.Name = "lblAcceptable";
-            this.lblAcceptable.Size = new System.Drawing.Size(243, 20);
-            this.lblAcceptable.TabIndex = 8;
-            this.lblAcceptable.Text = "Acceptable File Types: pdf, txt, rtf";
+            this.lblAcceptableTypes.AutoSize = true;
+            this.lblAcceptableTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblAcceptableTypes.Location = new System.Drawing.Point(281, 87);
+            this.lblAcceptableTypes.Name = "lblAcceptableTypes";
+            this.lblAcceptableTypes.Size = new System.Drawing.Size(243, 20);
+            this.lblAcceptableTypes.TabIndex = 8;
+            this.lblAcceptableTypes.Text = "Acceptable File Types: pdf, txt, rtf";
             // 
             // btnImport
             // 
@@ -94,6 +94,7 @@ namespace Comp_Sci_IA
             // 
             // txtFileName
             // 
+            this.txtFileName.Enabled = false;
             this.txtFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtFileName.Location = new System.Drawing.Point(210, 192);
             this.txtFileName.Name = "txtFileName";
@@ -120,7 +121,7 @@ namespace Comp_Sci_IA
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.lblFile);
             this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.lblAcceptable);
+            this.Controls.Add(this.lblAcceptableTypes);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblImportFile);
             this.Name = "ImportExistingFile";
@@ -134,7 +135,7 @@ namespace Comp_Sci_IA
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblImportFile;
-        private System.Windows.Forms.Label lblAcceptable;
+        private System.Windows.Forms.Label lblAcceptableTypes;
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Label lblFile;
         private System.Windows.Forms.TextBox txtFileName;
