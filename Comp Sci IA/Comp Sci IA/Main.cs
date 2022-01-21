@@ -15,6 +15,7 @@ namespace Comp_Sci_IA
     {
 
         public String mainText;
+        public static bool wantedToReturn;
 
         public Main()
         {
