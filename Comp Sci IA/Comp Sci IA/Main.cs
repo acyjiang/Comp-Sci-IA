@@ -15,11 +15,17 @@ namespace Comp_Sci_IA
     {
 
         public String mainText;
-        public static bool wantedToReturn;
+        public bool wantedToReturn;
+        public String _fileName;
+        public String _folder;
+        public bool _previewModeOn;
 
-        public Main()
+        public Main(String _fileName, String _folder, bool _previewModeOn)
         {
             InitializeComponent();
+            this._fileName = _fileName;
+            this._folder = _folder;
+            this._previewModeOn = _previewModeOn;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -34,6 +40,7 @@ namespace Comp_Sci_IA
             this.MinimizeBox = true;
 
             this.txtMain.Text = mainText;
+            this.lblFileName.Text = this._fileName;
         }
 
         private void btnReturnToStart_Click(object sender, EventArgs e)

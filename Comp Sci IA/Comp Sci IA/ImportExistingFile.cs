@@ -65,7 +65,7 @@ namespace Comp_Sci_IA
         private void btnImport_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main mainFile = new Main();
+            Main mainFile = new Main(_file, "", false);
             mainFile.mainText = System.IO.File.ReadAllText(@_file);
             mainFile.ShowDialog();
             this.Dispose();

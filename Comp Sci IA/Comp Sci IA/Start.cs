@@ -14,6 +14,10 @@ namespace Comp_Sci_IA
     public partial class Start : Form
     {
 
+        String _folder = String.Empty;
+        String _fileName = String.Empty;
+        bool _previewModeOn = false;
+
         public Start()
         {
             InitializeComponent();
@@ -43,22 +47,22 @@ namespace Comp_Sci_IA
 
             // Get the real bounds for the tab rectangle.
             Rectangle _tabBounds = tabControl1.GetTabRect(e.Index);
+            Font _tabFont;
 
             if (e.State == DrawItemState.Selected)
             {
 
                 // Draw a different background color, and don't paint a focus rectangle.
-                _textBrush = new SolidBrush(Color.Red);
+                _textBrush = new SolidBrush(Color.Black);
                 g.FillRectangle(Brushes.PeachPuff, e.Bounds);
+                _tabFont = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Bold, GraphicsUnit.Pixel);
             }
             else
             {
                 _textBrush = new SolidBrush(e.ForeColor);
                 e.DrawBackground();
+                _tabFont = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular, GraphicsUnit.Pixel);
             }
-
-            // Use our own font.
-            Font _tabFont = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular, GraphicsUnit.Pixel);
 
             // Draw string. Center the text.
             StringFormat _stringFlags = new StringFormat();
@@ -70,7 +74,7 @@ namespace Comp_Sci_IA
         private void btnCreateNewFile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main mainWindow = new Main();
+            Main mainWindow = new Main(_fileName, _folder, _previewModeOn);
             mainWindow.ShowDialog();
             this.Show();
         }
@@ -93,5 +97,64 @@ namespace Comp_Sci_IA
             this.Dispose();
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnPreviewModeOn_CheckedChanged(object sender, EventArgs e)
+        {
+            this._previewModeOn = true;
+        }
+
+        private void rbtnPreviewModeOff_CheckedChanged(object sender, EventArgs e)
+        {
+            this._previewModeOn = false;
+        }
+
+        private void chkSetPreviewDefault_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpenFileDialog_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog openFolder = new FolderBrowserDialog();
+
+            if (openFolder.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(openFolder.SelectedPath))
+            {
+                _folder = openFolder.SelectedPath;
+                this.textBox2.Text = _folder;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            this.textBox2.Text = String.Empty;
+            this.txtFileName.Text = String.Empty;
+            this.rbtnPreviewModeOn.Checked = false;
+            this.rbtnPreviewModeOff.Checked = false;
+            this.chkSetPreviewDefault.Checked = false;
+        }
+
+        private void txtFileName_TextChanged(object sender, EventArgs e)
+        {
+            _fileName = txtFileName.Text;
+        }
     }
 }

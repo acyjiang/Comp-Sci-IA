@@ -10,3 +10,16 @@ C:\Users\s412011\Documents\GitHub\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\
 C:\Users\s412011\Documents\GitHub\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.CoreCompileInputs.cache
 C:\Users\s412011\Documents\GitHub\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.exe
 C:\Users\s412011\Documents\GitHub\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.pdb
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\bin\Debug\Comp Sci IA.exe.config
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\bin\Debug\Comp Sci IA.exe
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\bin\Debug\Comp Sci IA.pdb
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.AssemblyReference.cache
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.SuggestedBindingRedirects.cache
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.ImportExistingFile.resources
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.Main.resources
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.Start.resources
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp_Sci_IA.Properties.Resources.resources
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.GenerateResource.cache
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.csproj.CoreCompileInputs.cache
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.exe
+C:\Users\Andy\source\repos\acyjiang\Comp-Sci-IA\Comp Sci IA\Comp Sci IA\obj\Debug\Comp Sci IA.pdb
