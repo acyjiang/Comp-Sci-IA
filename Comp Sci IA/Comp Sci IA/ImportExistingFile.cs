@@ -22,6 +22,7 @@ namespace Comp_Sci_IA
 
         private void ImportExistingFile_Load_1(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             SetControls();
         }
 

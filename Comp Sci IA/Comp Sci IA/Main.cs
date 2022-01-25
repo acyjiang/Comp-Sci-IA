@@ -30,6 +30,7 @@ namespace Comp_Sci_IA
 
         private void Main_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             SetControls();
         }
 

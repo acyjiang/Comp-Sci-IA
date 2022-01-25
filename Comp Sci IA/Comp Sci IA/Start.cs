@@ -16,6 +16,7 @@ namespace Comp_Sci_IA
 
         String _folder = String.Empty;
         String _fileName = String.Empty;
+        String _file = String.Empty;
         bool _previewModeOn = false;
 
         public Start()
@@ -27,6 +28,7 @@ namespace Comp_Sci_IA
 
         private void Start_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             SetControls();
         }
 
@@ -35,6 +37,7 @@ namespace Comp_Sci_IA
             tabControl1.TabPages[0].Text = "New File";
             tabControl1.TabPages[1].Text = "Open Recent File";
             tabControl1.TabPages[2].Text = "Import Existing File";
+            tabControl1.TabPages[3].Text = "Help";
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -155,6 +158,31 @@ namespace Comp_Sci_IA
         private void txtFileName_TextChanged(object sender, EventArgs e)
         {
             _fileName = txtFileName.Text;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main mainFile = new Main(_file, "", false);
+            mainFile.mainText = System.IO.File.ReadAllText(@_file);
+            mainFile.ShowDialog();
+            this.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+
+            openFile.Filter = "PDF (*.pdf)|*.pdf" + "|" +
+                                "TXT (*.txt)|*.txt" + "|" +
+                                "RTF (*.rtf)|*.rtf" + "|" +
+                                "All Files (*.*)|*.*";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                _file = openFile.FileName;
+                this.txtFileNameImport.Text = _file;
+            }
         }
     }
 }
