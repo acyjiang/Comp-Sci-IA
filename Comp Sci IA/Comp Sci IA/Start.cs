@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Comp_Sci_IA
 {
@@ -18,18 +19,32 @@ namespace Comp_Sci_IA
         String _fileName = String.Empty;
         String _file = String.Empty;
         bool _previewModeOn = false;
+        List<String> _recentFiles = new List<String>();
 
         public Start()
         {
             InitializeComponent();
 
             tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
+            tabControl1.MouseMove += new MouseEventHandler(tabControl1_MouseMove);
         }
 
         private void Start_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             SetControls();
+            SetDefaults();
+        }
+
+        private void SetDefaults()
+        {
+            string[] lines = System.IO.File.ReadAllLines(@"../../RecentFiles.txt");
+
+            foreach (string line in lines) {
+                string path = Path.GetDirectoryName(line);
+                string file = Path.GetFileName(line);
+                listBox1.Items.Add(file + "\t\t\t" + path);
+            }
         }
 
         private void SetControls()
@@ -38,6 +53,20 @@ namespace Comp_Sci_IA
             tabControl1.TabPages[1].Text = "Open Recent File";
             tabControl1.TabPages[2].Text = "Import Existing File";
             tabControl1.TabPages[3].Text = "Help";
+        }
+
+
+        private void tabControl1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Rectangle mouseRect = new Rectangle(e.X, e.Y, 1, 1);
+            for (int i = 0; i < tabControl1.TabCount; i++)
+            {
+                if (tabControl1.GetTabRect(i).IntersectsWith(mouseRect))
+                {
+                    //tabControl1.TabPages[i].Text = "dfasdsdaf";
+                    break;
+                }
+            }
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -77,7 +106,7 @@ namespace Comp_Sci_IA
         private void btnCreateNewFile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main mainWindow = new Main(_fileName, _folder, _previewModeOn);
+            Main mainWindow = new Main(_fileName, _folder, "", _previewModeOn);
             mainWindow.ShowDialog();
             this.Show();
         }
@@ -163,8 +192,8 @@ namespace Comp_Sci_IA
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main mainFile = new Main(_file, "", false);
-            mainFile.mainText = System.IO.File.ReadAllText(@_file);
+            Main mainFile = new Main(_file, "",  "", false);
+            mainFile._mainText = System.IO.File.ReadAllText(@_file);
             mainFile.ShowDialog();
             this.Dispose();
         }

@@ -294,10 +294,12 @@ namespace Comp_Sci_IA
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(6, 30);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(526, 212);
+            this.listBox1.Size = new System.Drawing.Size(526, 204);
             this.listBox1.TabIndex = 5;
             // 
             // tabPage3

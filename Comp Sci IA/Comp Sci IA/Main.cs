@@ -14,15 +14,16 @@ namespace Comp_Sci_IA
     public partial class Main : Form
     {
 
-        public String mainText;
-        public bool wantedToReturn;
+        public String _mainText;
+        public bool _wantedToReturn;
         public String _fileName;
         public String _folder;
         public bool _previewModeOn;
 
-        public Main(String _fileName, String _folder, bool _previewModeOn)
+        public Main(String _fileName, String _folder, String _mainText, bool _previewModeOn)
         {
             InitializeComponent();
+            this._mainText = _mainText;
             this._fileName = _fileName;
             this._folder = _folder;
             this._previewModeOn = _previewModeOn;
@@ -40,7 +41,7 @@ namespace Comp_Sci_IA
             this.MaximizeBox = true;
             this.MinimizeBox = true;
 
-            this.txtMain.Text = mainText;
+            this.txtMain.Text = _mainText;
             this.lblFileName.Text = this._fileName;
         }
 
