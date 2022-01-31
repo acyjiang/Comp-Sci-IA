@@ -14,10 +14,9 @@ namespace Comp_Sci_IA
 
     public partial class Start : Form
     {
-
-        String _folder = String.Empty;
         String _fileName = String.Empty;
-        String _file = String.Empty;
+        String _folderPath = String.Empty;
+        String _fileContents = String.Empty;
         bool _previewModeOn = false;
         List<String> _recentFiles = new List<String>();
 
@@ -26,7 +25,7 @@ namespace Comp_Sci_IA
             InitializeComponent();
 
             tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
-            tabControl1.MouseMove += new MouseEventHandler(tabControl1_MouseMove);
+            //tabControl1.MouseMove += new MouseEventHandler(tabControl1_MouseMove);
         }
 
         private void Start_Load(object sender, EventArgs e)
@@ -34,17 +33,6 @@ namespace Comp_Sci_IA
             this.CenterToScreen();
             SetControls();
             SetDefaults();
-        }
-
-        private void SetDefaults()
-        {
-            string[] lines = System.IO.File.ReadAllLines(@"../../RecentFiles.txt");
-
-            foreach (string line in lines) {
-                string path = Path.GetDirectoryName(line);
-                string file = Path.GetFileName(line);
-                listBox1.Items.Add(file + "\t\t\t" + path);
-            }
         }
 
         private void SetControls()
@@ -55,18 +43,34 @@ namespace Comp_Sci_IA
             tabControl1.TabPages[3].Text = "Help";
         }
 
-
-        private void tabControl1_MouseMove(object sender, MouseEventArgs e)
+        private void SetDefaults()
         {
-            Rectangle mouseRect = new Rectangle(e.X, e.Y, 1, 1);
-            for (int i = 0; i < tabControl1.TabCount; i++)
+            string[] lines = System.IO.File.ReadAllLines(@"../../RecentFiles.txt");
+
+            foreach (string line in lines)
             {
-                if (tabControl1.GetTabRect(i).IntersectsWith(mouseRect))
-                {
-                    //tabControl1.TabPages[i].Text = "dfasdsdaf";
-                    break;
-                }
+                string path = Path.GetDirectoryName(line);
+                string file = Path.GetFileName(line);
+                lstbxRecentFiles2.Items.Add(line);
             }
+        }
+
+        private void OpenMain()
+        {
+            this.Hide();
+            Main mainWindow = new Main(_fileName, _folderPath, _fileContents, _previewModeOn);
+            mainWindow.ShowDialog();
+            this.Show();
+        }
+
+        private void btnReturnToEditor_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -103,102 +107,84 @@ namespace Comp_Sci_IA
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
 
-        private void btnCreateNewFile_Click(object sender, EventArgs e)
+        private void btnCreateNewFile1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Main mainWindow = new Main(_fileName, _folder, "", _previewModeOn);
-            mainWindow.ShowDialog();
-            this.Show();
+            OpenMain();
         }
 
-        private void btnImportExistingFile_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ImportExistingFile importWindow = new ImportExistingFile();
-            importWindow.ShowDialog();
-            this.Show();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void btnReturnToEditor_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnPreviewModeOn_CheckedChanged(object sender, EventArgs e)
+        private void rbtnPreviewModeOn1_CheckedChanged(object sender, EventArgs e)
         {
             this._previewModeOn = true;
         }
 
-        private void rbtnPreviewModeOff_CheckedChanged(object sender, EventArgs e)
+        private void rbtnPreviewModeOff1_CheckedChanged(object sender, EventArgs e)
         {
             this._previewModeOn = false;
         }
 
-        private void chkSetPreviewDefault_CheckedChanged(object sender, EventArgs e)
+        private void chkSetPreviewDefault1_CheckedChanged(object sender, EventArgs e)
         {
             
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOpenFileDialog_Click(object sender, EventArgs e)
+        private void btnOpenFileDialog1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog openFolder = new FolderBrowserDialog();
 
             if (openFolder.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(openFolder.SelectedPath))
             {
-                _folder = openFolder.SelectedPath;
-                this.textBox2.Text = _folder;
+                _folderPath = openFolder.SelectedPath;
+                this.txtSaveLocation1.Text = _folderPath;
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void btnReset1_Click(object sender, EventArgs e)
         {
-
+            this.txtSaveLocation1.Text = String.Empty;
+            this.txtFileName1.Text = String.Empty;
+            this.rbtnPreviewModeOn1.Checked = false;
+            this.rbtnPreviewModeOff1.Checked = false;
+            this.chkSetPreviewDefault1.Checked = false;
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void txtFileName1_TextChanged(object sender, EventArgs e)
         {
-            this.textBox2.Text = String.Empty;
-            this.txtFileName.Text = String.Empty;
-            this.rbtnPreviewModeOn.Checked = false;
-            this.rbtnPreviewModeOff.Checked = false;
-            this.chkSetPreviewDefault.Checked = false;
+            _fileName = txtFileName1.Text;
         }
 
-        private void txtFileName_TextChanged(object sender, EventArgs e)
+        private void tabPage2_Enter(object sender, EventArgs e)
         {
-            _fileName = txtFileName.Text;
+            this.btnOpen2.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void tabPage2_Leave(object sender, EventArgs e)
         {
-            this.Hide();
-            Main mainFile = new Main(_file, "",  "", false);
-            mainFile._mainText = System.IO.File.ReadAllText(@_file);
-            mainFile.ShowDialog();
-            this.Dispose();
+            this.btnOpen2.Hide();
+            this.lstbxRecentFiles2.SelectedIndex = -1;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lstbxRecentFiles2_Enter(object sender, EventArgs e)
+        {
+            this.btnOpen2.Show();
+        }
+
+        private void btnOpen2_Click(object sender, EventArgs e)
+        {
+            string path = lstbxRecentFiles2.SelectedItem.ToString();
+            this._fileContents = System.IO.File.ReadAllText(path);
+            this._folderPath = Path.GetDirectoryName(path);
+            this._fileName = Path.GetFileName(path);
+            OpenMain();
+        }
+        
+        private void btnImport3_Click(object sender, EventArgs e)
+        {
+            
+            this._fileContents = System.IO.File.ReadAllText(@_fileName);
+            OpenMain();
+        }
+
+        private void btnOpenFileDialog3_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
 
@@ -209,9 +195,10 @@ namespace Comp_Sci_IA
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                _file = openFile.FileName;
-                this.txtFileNameImport.Text = _file;
+                _fileName = openFile.FileName;
+                this.txtFileNameImport3.Text = _fileName;
             }
         }
+
     }
 }

@@ -30,31 +30,31 @@ namespace Comp_Sci_IA
         private void InitializeComponent()
         {
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnCreateNewFile = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnCreateNewFile1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnReturnToEditor = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnOpenFileDialog = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.chkSetPreviewDefault = new System.Windows.Forms.CheckBox();
-            this.txtFileName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rbtnPreviewModeOff = new System.Windows.Forms.RadioButton();
-            this.rbtnPreviewModeOn = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnOpenFileDialog1 = new System.Windows.Forms.Button();
+            this.txtSaveLocation1 = new System.Windows.Forms.TextBox();
+            this.lblSaveLocation1 = new System.Windows.Forms.Label();
+            this.btnReset1 = new System.Windows.Forms.Button();
+            this.chkSetPreviewDefault1 = new System.Windows.Forms.CheckBox();
+            this.txtFileName1 = new System.Windows.Forms.TextBox();
+            this.lblFileName1 = new System.Windows.Forms.Label();
+            this.rbtnPreviewModeOff1 = new System.Windows.Forms.RadioButton();
+            this.rbtnPreviewModeOn1 = new System.Windows.Forms.RadioButton();
+            this.lblPreviewMode1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnOpen2 = new System.Windows.Forms.Button();
+            this.lblRecentFiles2 = new System.Windows.Forms.Label();
+            this.lstbxRecentFiles2 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.lblAcceptableTypes = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtFileNameImport = new System.Windows.Forms.TextBox();
-            this.lblFile = new System.Windows.Forms.Label();
+            this.btnImport3 = new System.Windows.Forms.Button();
+            this.lblAcceptableTypes3 = new System.Windows.Forms.Label();
+            this.btnOpenFileDialog3 = new System.Windows.Forms.Button();
+            this.txtFileNameImport3 = new System.Windows.Forms.TextBox();
+            this.lblUploadFile3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -72,29 +72,29 @@ namespace Comp_Sci_IA
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome! Select an option:";
             // 
-            // btnCreateNewFile
+            // btnCreateNewFile1
             // 
-            this.btnCreateNewFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnCreateNewFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnCreateNewFile.Location = new System.Drawing.Point(421, 261);
-            this.btnCreateNewFile.Name = "btnCreateNewFile";
-            this.btnCreateNewFile.Size = new System.Drawing.Size(110, 30);
-            this.btnCreateNewFile.TabIndex = 1;
-            this.btnCreateNewFile.Text = "Create";
-            this.btnCreateNewFile.UseVisualStyleBackColor = false;
-            this.btnCreateNewFile.Click += new System.EventHandler(this.btnCreateNewFile_Click);
+            this.btnCreateNewFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnCreateNewFile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCreateNewFile1.Location = new System.Drawing.Point(404, 256);
+            this.btnCreateNewFile1.Name = "btnCreateNewFile1";
+            this.btnCreateNewFile1.Size = new System.Drawing.Size(110, 30);
+            this.btnCreateNewFile1.TabIndex = 1;
+            this.btnCreateNewFile1.Text = "Create";
+            this.btnCreateNewFile1.UseVisualStyleBackColor = false;
+            this.btnCreateNewFile1.Click += new System.EventHandler(this.btnCreateNewFile1_Click);
             // 
-            // btnClose
+            // btnExit
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnClose.Location = new System.Drawing.Point(648, 393);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(124, 48);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Exit";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnExit.Location = new System.Drawing.Point(648, 393);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(124, 48);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnReturnToEditor
             // 
@@ -129,17 +129,17 @@ namespace Comp_Sci_IA
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.btnOpenFileDialog);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.btnReset);
-            this.tabPage1.Controls.Add(this.chkSetPreviewDefault);
-            this.tabPage1.Controls.Add(this.txtFileName);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.rbtnPreviewModeOff);
-            this.tabPage1.Controls.Add(this.rbtnPreviewModeOn);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.btnCreateNewFile);
+            this.tabPage1.Controls.Add(this.btnOpenFileDialog1);
+            this.tabPage1.Controls.Add(this.txtSaveLocation1);
+            this.tabPage1.Controls.Add(this.lblSaveLocation1);
+            this.tabPage1.Controls.Add(this.btnReset1);
+            this.tabPage1.Controls.Add(this.chkSetPreviewDefault1);
+            this.tabPage1.Controls.Add(this.txtFileName1);
+            this.tabPage1.Controls.Add(this.lblFileName1);
+            this.tabPage1.Controls.Add(this.rbtnPreviewModeOff1);
+            this.tabPage1.Controls.Add(this.rbtnPreviewModeOn1);
+            this.tabPage1.Controls.Add(this.lblPreviewMode1);
+            this.tabPage1.Controls.Add(this.btnCreateNewFile1);
             this.tabPage1.Location = new System.Drawing.Point(204, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -147,133 +147,130 @@ namespace Comp_Sci_IA
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // btnOpenFileDialog
+            // btnOpenFileDialog1
             // 
-            this.btnOpenFileDialog.Location = new System.Drawing.Point(507, 83);
-            this.btnOpenFileDialog.Name = "btnOpenFileDialog";
-            this.btnOpenFileDialog.Size = new System.Drawing.Size(25, 23);
-            this.btnOpenFileDialog.TabIndex = 13;
-            this.btnOpenFileDialog.Text = "...";
-            this.btnOpenFileDialog.UseVisualStyleBackColor = true;
-            this.btnOpenFileDialog.Click += new System.EventHandler(this.btnOpenFileDialog_Click);
+            this.btnOpenFileDialog1.Location = new System.Drawing.Point(507, 83);
+            this.btnOpenFileDialog1.Name = "btnOpenFileDialog1";
+            this.btnOpenFileDialog1.Size = new System.Drawing.Size(25, 23);
+            this.btnOpenFileDialog1.TabIndex = 13;
+            this.btnOpenFileDialog1.Text = "...";
+            this.btnOpenFileDialog1.UseVisualStyleBackColor = true;
+            this.btnOpenFileDialog1.Click += new System.EventHandler(this.btnOpenFileDialog1_Click);
             // 
-            // textBox2
+            // txtSaveLocation1
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(217, 81);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(285, 26);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtSaveLocation1.Enabled = false;
+            this.txtSaveLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSaveLocation1.Location = new System.Drawing.Point(217, 81);
+            this.txtSaveLocation1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSaveLocation1.Name = "txtSaveLocation1";
+            this.txtSaveLocation1.ReadOnly = true;
+            this.txtSaveLocation1.Size = new System.Drawing.Size(285, 26);
+            this.txtSaveLocation1.TabIndex = 10;
             // 
-            // label3
+            // lblSaveLocation1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(28, 83);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Save Location (optional):";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblSaveLocation1.AutoSize = true;
+            this.lblSaveLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblSaveLocation1.Location = new System.Drawing.Point(28, 83);
+            this.lblSaveLocation1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSaveLocation1.Name = "lblSaveLocation1";
+            this.lblSaveLocation1.Size = new System.Drawing.Size(184, 20);
+            this.lblSaveLocation1.TabIndex = 9;
+            this.lblSaveLocation1.Text = "Save Location (optional):";
             // 
-            // btnReset
+            // btnReset1
             // 
-            this.btnReset.BackColor = System.Drawing.Color.Transparent;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnReset.Location = new System.Drawing.Point(298, 261);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(110, 30);
-            this.btnReset.TabIndex = 8;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset1.BackColor = System.Drawing.Color.Transparent;
+            this.btnReset1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnReset1.Location = new System.Drawing.Point(281, 256);
+            this.btnReset1.Name = "btnReset1";
+            this.btnReset1.Size = new System.Drawing.Size(110, 30);
+            this.btnReset1.TabIndex = 8;
+            this.btnReset1.Text = "Reset";
+            this.btnReset1.UseVisualStyleBackColor = false;
+            this.btnReset1.Click += new System.EventHandler(this.btnReset1_Click);
             // 
-            // chkSetPreviewDefault
+            // chkSetPreviewDefault1
             // 
-            this.chkSetPreviewDefault.AutoSize = true;
-            this.chkSetPreviewDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.chkSetPreviewDefault.Location = new System.Drawing.Point(363, 133);
-            this.chkSetPreviewDefault.Margin = new System.Windows.Forms.Padding(2);
-            this.chkSetPreviewDefault.Name = "chkSetPreviewDefault";
-            this.chkSetPreviewDefault.Size = new System.Drawing.Size(114, 21);
-            this.chkSetPreviewDefault.TabIndex = 7;
-            this.chkSetPreviewDefault.Text = "Set as default";
-            this.chkSetPreviewDefault.UseVisualStyleBackColor = true;
-            this.chkSetPreviewDefault.CheckedChanged += new System.EventHandler(this.chkSetPreviewDefault_CheckedChanged);
+            this.chkSetPreviewDefault1.AutoSize = true;
+            this.chkSetPreviewDefault1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkSetPreviewDefault1.Location = new System.Drawing.Point(363, 133);
+            this.chkSetPreviewDefault1.Margin = new System.Windows.Forms.Padding(2);
+            this.chkSetPreviewDefault1.Name = "chkSetPreviewDefault1";
+            this.chkSetPreviewDefault1.Size = new System.Drawing.Size(114, 21);
+            this.chkSetPreviewDefault1.TabIndex = 7;
+            this.chkSetPreviewDefault1.Text = "Set as default";
+            this.chkSetPreviewDefault1.UseVisualStyleBackColor = true;
+            this.chkSetPreviewDefault1.CheckedChanged += new System.EventHandler(this.chkSetPreviewDefault1_CheckedChanged);
             // 
-            // txtFileName
+            // txtFileName1
             // 
-            this.txtFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtFileName.Location = new System.Drawing.Point(217, 30);
-            this.txtFileName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(315, 26);
-            this.txtFileName.TabIndex = 6;
-            this.txtFileName.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
+            this.txtFileName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFileName1.Location = new System.Drawing.Point(217, 30);
+            this.txtFileName1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFileName1.Name = "txtFileName1";
+            this.txtFileName1.Size = new System.Drawing.Size(315, 26);
+            this.txtFileName1.TabIndex = 6;
+            this.txtFileName1.TextChanged += new System.EventHandler(this.txtFileName1_TextChanged);
             // 
-            // label2
+            // lblFileName1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(54, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "File Name (optional):";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblFileName1.AutoSize = true;
+            this.lblFileName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblFileName1.Location = new System.Drawing.Point(54, 32);
+            this.lblFileName1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFileName1.Name = "lblFileName1";
+            this.lblFileName1.Size = new System.Drawing.Size(154, 20);
+            this.lblFileName1.TabIndex = 5;
+            this.lblFileName1.Text = "File Name (optional):";
             // 
-            // rbtnPreviewModeOff
+            // rbtnPreviewModeOff1
             // 
-            this.rbtnPreviewModeOff.AutoSize = true;
-            this.rbtnPreviewModeOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbtnPreviewModeOff.Location = new System.Drawing.Point(285, 133);
-            this.rbtnPreviewModeOff.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtnPreviewModeOff.Name = "rbtnPreviewModeOff";
-            this.rbtnPreviewModeOff.Size = new System.Drawing.Size(45, 21);
-            this.rbtnPreviewModeOff.TabIndex = 4;
-            this.rbtnPreviewModeOff.TabStop = true;
-            this.rbtnPreviewModeOff.Text = "Off";
-            this.rbtnPreviewModeOff.UseVisualStyleBackColor = true;
-            this.rbtnPreviewModeOff.CheckedChanged += new System.EventHandler(this.rbtnPreviewModeOff_CheckedChanged);
+            this.rbtnPreviewModeOff1.AutoSize = true;
+            this.rbtnPreviewModeOff1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbtnPreviewModeOff1.Location = new System.Drawing.Point(285, 133);
+            this.rbtnPreviewModeOff1.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnPreviewModeOff1.Name = "rbtnPreviewModeOff1";
+            this.rbtnPreviewModeOff1.Size = new System.Drawing.Size(45, 21);
+            this.rbtnPreviewModeOff1.TabIndex = 4;
+            this.rbtnPreviewModeOff1.TabStop = true;
+            this.rbtnPreviewModeOff1.Text = "Off";
+            this.rbtnPreviewModeOff1.UseVisualStyleBackColor = true;
+            this.rbtnPreviewModeOff1.CheckedChanged += new System.EventHandler(this.rbtnPreviewModeOff1_CheckedChanged);
             // 
-            // rbtnPreviewModeOn
+            // rbtnPreviewModeOn1
             // 
-            this.rbtnPreviewModeOn.AutoSize = true;
-            this.rbtnPreviewModeOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbtnPreviewModeOn.Location = new System.Drawing.Point(229, 133);
-            this.rbtnPreviewModeOn.Margin = new System.Windows.Forms.Padding(2);
-            this.rbtnPreviewModeOn.Name = "rbtnPreviewModeOn";
-            this.rbtnPreviewModeOn.Size = new System.Drawing.Size(45, 21);
-            this.rbtnPreviewModeOn.TabIndex = 3;
-            this.rbtnPreviewModeOn.TabStop = true;
-            this.rbtnPreviewModeOn.Text = "On";
-            this.rbtnPreviewModeOn.UseVisualStyleBackColor = true;
-            this.rbtnPreviewModeOn.CheckedChanged += new System.EventHandler(this.rbtnPreviewModeOn_CheckedChanged);
+            this.rbtnPreviewModeOn1.AutoSize = true;
+            this.rbtnPreviewModeOn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbtnPreviewModeOn1.Location = new System.Drawing.Point(229, 133);
+            this.rbtnPreviewModeOn1.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnPreviewModeOn1.Name = "rbtnPreviewModeOn1";
+            this.rbtnPreviewModeOn1.Size = new System.Drawing.Size(45, 21);
+            this.rbtnPreviewModeOn1.TabIndex = 3;
+            this.rbtnPreviewModeOn1.TabStop = true;
+            this.rbtnPreviewModeOn1.Text = "On";
+            this.rbtnPreviewModeOn1.UseVisualStyleBackColor = true;
+            this.rbtnPreviewModeOn1.CheckedChanged += new System.EventHandler(this.rbtnPreviewModeOn1_CheckedChanged);
             // 
-            // label1
+            // lblPreviewMode1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(25, 132);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Preview Mode (optional):";
+            this.lblPreviewMode1.AutoSize = true;
+            this.lblPreviewMode1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblPreviewMode1.Location = new System.Drawing.Point(25, 132);
+            this.lblPreviewMode1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPreviewMode1.Name = "lblPreviewMode1";
+            this.lblPreviewMode1.Size = new System.Drawing.Size(181, 20);
+            this.lblPreviewMode1.TabIndex = 2;
+            this.lblPreviewMode1.Text = "Preview Mode (optional):";
             // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.listBox1);
+            this.tabPage2.Controls.Add(this.btnOpen2);
+            this.tabPage2.Controls.Add(this.lblRecentFiles2);
+            this.tabPage2.Controls.Add(this.lstbxRecentFiles2);
             this.tabPage2.Location = new System.Drawing.Point(204, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -281,37 +278,51 @@ namespace Comp_Sci_IA
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
+            this.tabPage2.Leave += new System.EventHandler(this.tabPage2_Leave);
             // 
-            // label4
+            // btnOpen2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(7, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Recent files:";
+            this.btnOpen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnOpen2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnOpen2.Location = new System.Drawing.Point(404, 256);
+            this.btnOpen2.Name = "btnOpen2";
+            this.btnOpen2.Size = new System.Drawing.Size(110, 30);
+            this.btnOpen2.TabIndex = 19;
+            this.btnOpen2.Text = "Open";
+            this.btnOpen2.UseVisualStyleBackColor = false;
+            this.btnOpen2.Click += new System.EventHandler(this.btnOpen2_Click);
             // 
-            // listBox1
+            // lblRecentFiles2
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(6, 30);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(526, 204);
-            this.listBox1.TabIndex = 5;
+            this.lblRecentFiles2.AutoSize = true;
+            this.lblRecentFiles2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblRecentFiles2.Location = new System.Drawing.Point(7, 7);
+            this.lblRecentFiles2.Name = "lblRecentFiles2";
+            this.lblRecentFiles2.Size = new System.Drawing.Size(97, 20);
+            this.lblRecentFiles2.TabIndex = 6;
+            this.lblRecentFiles2.Text = "Recent files:";
+            // 
+            // lstbxRecentFiles2
+            // 
+            this.lstbxRecentFiles2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lstbxRecentFiles2.FormattingEnabled = true;
+            this.lstbxRecentFiles2.ItemHeight = 20;
+            this.lstbxRecentFiles2.Location = new System.Drawing.Point(6, 30);
+            this.lstbxRecentFiles2.Name = "lstbxRecentFiles2";
+            this.lstbxRecentFiles2.Size = new System.Drawing.Size(526, 204);
+            this.lstbxRecentFiles2.TabIndex = 5;
+            this.lstbxRecentFiles2.Enter += new System.EventHandler(this.lstbxRecentFiles2_Enter);
             // 
             // tabPage3
             // 
             this.tabPage3.AutoScroll = true;
             this.tabPage3.AutoScrollMargin = new System.Drawing.Size(20, 20);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.lblAcceptableTypes);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.txtFileNameImport);
-            this.tabPage3.Controls.Add(this.lblFile);
+            this.tabPage3.Controls.Add(this.btnImport3);
+            this.tabPage3.Controls.Add(this.lblAcceptableTypes3);
+            this.tabPage3.Controls.Add(this.btnOpenFileDialog3);
+            this.tabPage3.Controls.Add(this.txtFileNameImport3);
+            this.tabPage3.Controls.Add(this.lblUploadFile3);
             this.tabPage3.Location = new System.Drawing.Point(204, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -320,67 +331,56 @@ namespace Comp_Sci_IA
             this.tabPage3.Text = "Import Existing File";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnImport3
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(281, 257);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 30);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnImport3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnImport3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnImport3.Location = new System.Drawing.Point(404, 256);
+            this.btnImport3.Name = "btnImport3";
+            this.btnImport3.Size = new System.Drawing.Size(110, 30);
+            this.btnImport3.TabIndex = 17;
+            this.btnImport3.Text = "Import";
+            this.btnImport3.UseVisualStyleBackColor = false;
+            this.btnImport3.Click += new System.EventHandler(this.btnImport3_Click);
             // 
-            // button3
+            // lblAcceptableTypes3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(404, 257);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 30);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Import";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.lblAcceptableTypes3.AutoSize = true;
+            this.lblAcceptableTypes3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblAcceptableTypes3.Location = new System.Drawing.Point(171, 32);
+            this.lblAcceptableTypes3.Name = "lblAcceptableTypes3";
+            this.lblAcceptableTypes3.Size = new System.Drawing.Size(243, 20);
+            this.lblAcceptableTypes3.TabIndex = 16;
+            this.lblAcceptableTypes3.Text = "Acceptable File Types: pdf, txt, rtf";
             // 
-            // lblAcceptableTypes
+            // btnOpenFileDialog3
             // 
-            this.lblAcceptableTypes.AutoSize = true;
-            this.lblAcceptableTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblAcceptableTypes.Location = new System.Drawing.Point(171, 32);
-            this.lblAcceptableTypes.Name = "lblAcceptableTypes";
-            this.lblAcceptableTypes.Size = new System.Drawing.Size(243, 20);
-            this.lblAcceptableTypes.TabIndex = 16;
-            this.lblAcceptableTypes.Text = "Acceptable File Types: pdf, txt, rtf";
+            this.btnOpenFileDialog3.Location = new System.Drawing.Point(489, 77);
+            this.btnOpenFileDialog3.Name = "btnOpenFileDialog3";
+            this.btnOpenFileDialog3.Size = new System.Drawing.Size(25, 23);
+            this.btnOpenFileDialog3.TabIndex = 15;
+            this.btnOpenFileDialog3.Text = "...";
+            this.btnOpenFileDialog3.UseVisualStyleBackColor = true;
+            this.btnOpenFileDialog3.Click += new System.EventHandler(this.btnOpenFileDialog3_Click);
             // 
-            // button1
+            // txtFileNameImport3
             // 
-            this.button1.Location = new System.Drawing.Point(489, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtFileNameImport3.Enabled = false;
+            this.txtFileNameImport3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFileNameImport3.Location = new System.Drawing.Point(134, 74);
+            this.txtFileNameImport3.Name = "txtFileNameImport3";
+            this.txtFileNameImport3.Size = new System.Drawing.Size(349, 26);
+            this.txtFileNameImport3.TabIndex = 14;
             // 
-            // txtFileNameImport
+            // lblUploadFile3
             // 
-            this.txtFileNameImport.Enabled = false;
-            this.txtFileNameImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtFileNameImport.Location = new System.Drawing.Point(134, 74);
-            this.txtFileNameImport.Name = "txtFileNameImport";
-            this.txtFileNameImport.Size = new System.Drawing.Size(349, 26);
-            this.txtFileNameImport.TabIndex = 14;
-            // 
-            // lblFile
-            // 
-            this.lblFile.AutoSize = true;
-            this.lblFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblFile.Location = new System.Drawing.Point(40, 77);
-            this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(88, 20);
-            this.lblFile.TabIndex = 13;
-            this.lblFile.Text = "Upload file:";
+            this.lblUploadFile3.AutoSize = true;
+            this.lblUploadFile3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblUploadFile3.Location = new System.Drawing.Point(40, 77);
+            this.lblUploadFile3.Name = "lblUploadFile3";
+            this.lblUploadFile3.Size = new System.Drawing.Size(88, 20);
+            this.lblUploadFile3.TabIndex = 13;
+            this.lblUploadFile3.Text = "Upload file:";
             // 
             // tabPage4
             // 
@@ -400,7 +400,7 @@ namespace Comp_Sci_IA
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnReturnToEditor);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblWelcome);
             this.Name = "Start";
             this.Text = "Start";
@@ -420,32 +420,32 @@ namespace Comp_Sci_IA
         #endregion
 
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Button btnCreateNewFile;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnCreateNewFile1;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnReturnToEditor;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstbxRecentFiles2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.RadioButton rbtnPreviewModeOff;
-        private System.Windows.Forms.RadioButton rbtnPreviewModeOn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox chkSetPreviewDefault;
-        private System.Windows.Forms.TextBox txtFileName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnOpenFileDialog;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtFileNameImport;
-        private System.Windows.Forms.Label lblFile;
+        private System.Windows.Forms.RadioButton rbtnPreviewModeOff1;
+        private System.Windows.Forms.RadioButton rbtnPreviewModeOn1;
+        private System.Windows.Forms.Label lblPreviewMode1;
+        private System.Windows.Forms.CheckBox chkSetPreviewDefault1;
+        private System.Windows.Forms.TextBox txtFileName1;
+        private System.Windows.Forms.Label lblFileName1;
+        private System.Windows.Forms.Button btnReset1;
+        private System.Windows.Forms.TextBox txtSaveLocation1;
+        private System.Windows.Forms.Label lblSaveLocation1;
+        private System.Windows.Forms.Button btnOpenFileDialog1;
+        private System.Windows.Forms.Button btnOpenFileDialog3;
+        private System.Windows.Forms.TextBox txtFileNameImport3;
+        private System.Windows.Forms.Label lblUploadFile3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label lblAcceptableTypes;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblAcceptableTypes3;
+        private System.Windows.Forms.Button btnImport3;
+        private System.Windows.Forms.Label lblRecentFiles2;
+        private System.Windows.Forms.Button btnOpen2;
     }
 }
 
