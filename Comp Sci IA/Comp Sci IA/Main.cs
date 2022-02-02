@@ -19,6 +19,8 @@ namespace Comp_Sci_IA
         public String _fileName;
         public String _folder;
         public bool _previewModeOn;
+        public const int WINDOWWIDTH = 816;
+        public const int WINDOWHEIGHT = 489;
 
         public Main(String _fileName, String _folder, String _mainText, bool _previewModeOn)
         {
@@ -43,6 +45,33 @@ namespace Comp_Sci_IA
 
             this.txtMain.Text = _mainText;
             this.lblFileName.Text = this._fileName;
+            this.lblFileName.Location = new Point(WINDOWWIDTH / 2 - lblFileName.Size.Width / 2, lblFileName.Location.Y);
+
+            if (_previewModeOn)
+            {
+                toggleOnPreviewMode();
+            } else
+            {
+                toggleOffPreviewMode();
+            }
+        }
+        
+        private void toggleOnPreviewMode()
+        {
+            this.txtPreview.Show();
+            this.txtMain.Width = txtPreview.Width;
+            this.btnPreviewMode.Text = "Preview Mode On";
+            this.btnPreviewMode.Font = new Font("Microsoft Sans Serif", 9);
+            this._previewModeOn = true;
+        }
+
+        private void toggleOffPreviewMode()
+        {
+            this.txtPreview.Hide();
+            this.txtMain.Width = txtPreview.Location.X + txtPreview.Size.Width - txtMain.Location.X;
+            this.btnPreviewMode.Text = "Preview Mode Off";
+            this.btnPreviewMode.Font = new Font("Microsoft Sans Serif", 8);
+            this._previewModeOn = false;
         }
 
         private void btnReturnToStart_Click(object sender, EventArgs e)
@@ -53,6 +82,21 @@ namespace Comp_Sci_IA
             this.Show();
         }
 
-        
+        private void btnPreviewMode_Click(object sender, EventArgs e)
+        {
+            if (_previewModeOn)
+            {
+                toggleOffPreviewMode();
+            } 
+            else
+            {
+                toggleOnPreviewMode();
+            }
+        }
+
+        private void txtMain_TextChanged(object sender, EventArgs e)
+        {
+            txtPreview.Text = txtMain.Text;
+        }
     }
 }

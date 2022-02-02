@@ -160,7 +160,6 @@ namespace Comp_Sci_IA
             // 
             // txtSaveLocation1
             // 
-            this.txtSaveLocation1.Enabled = false;
             this.txtSaveLocation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtSaveLocation1.Location = new System.Drawing.Point(217, 81);
             this.txtSaveLocation1.Margin = new System.Windows.Forms.Padding(2);
@@ -365,7 +364,6 @@ namespace Comp_Sci_IA
             // 
             // txtFileNameImport3
             // 
-            this.txtFileNameImport3.Enabled = false;
             this.txtFileNameImport3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtFileNameImport3.Location = new System.Drawing.Point(134, 74);
             this.txtFileNameImport3.Name = "txtFileNameImport3";

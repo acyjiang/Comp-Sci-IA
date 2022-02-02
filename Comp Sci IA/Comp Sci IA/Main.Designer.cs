@@ -33,6 +33,9 @@ namespace Comp_Sci_IA
             this.btnOpenStart = new System.Windows.Forms.Button();
             this.txtMain = new System.Windows.Forms.RichTextBox();
             this.lblFileName = new System.Windows.Forms.Label();
+            this.txtPreview = new System.Windows.Forms.RichTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnPreviewMode
@@ -43,6 +46,7 @@ namespace Comp_Sci_IA
             this.btnPreviewMode.TabIndex = 1;
             this.btnPreviewMode.Text = "Preview Mode: Off";
             this.btnPreviewMode.UseVisualStyleBackColor = true;
+            this.btnPreviewMode.Click += new System.EventHandler(this.btnPreviewMode_Click);
             // 
             // btnOpenStart
             // 
@@ -63,6 +67,7 @@ namespace Comp_Sci_IA
             this.txtMain.Size = new System.Drawing.Size(745, 218);
             this.txtMain.TabIndex = 3;
             this.txtMain.Text = "";
+            this.txtMain.TextChanged += new System.EventHandler(this.txtMain_TextChanged);
             // 
             // lblFileName
             // 
@@ -74,12 +79,47 @@ namespace Comp_Sci_IA
             this.lblFileName.TabIndex = 0;
             this.lblFileName.Text = "Untitled1";
             // 
+            // txtPreview
+            // 
+            this.txtPreview.Location = new System.Drawing.Point(410, 68);
+            this.txtPreview.Name = "txtPreview";
+            this.txtPreview.Size = new System.Drawing.Size(362, 218);
+            this.txtPreview.TabIndex = 4;
+            this.txtPreview.Text = "";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AllowDrop = true;
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(99, 326);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(71, 23);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(367, 359);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(77, 23);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.txtPreview);
             this.Controls.Add(this.txtMain);
             this.Controls.Add(this.btnOpenStart);
             this.Controls.Add(this.btnPreviewMode);
@@ -97,5 +137,8 @@ namespace Comp_Sci_IA
         private System.Windows.Forms.Button btnOpenStart;
         private System.Windows.Forms.RichTextBox txtMain;
         private System.Windows.Forms.Label lblFileName;
+        private System.Windows.Forms.RichTextBox txtPreview;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
