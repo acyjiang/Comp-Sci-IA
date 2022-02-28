@@ -25,11 +25,12 @@ namespace Comp_Sci_IA
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            /*if (_fileType == null)
+            if (_fileType == null)
             {
                 MessageBox.Show("Please choose a file type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            _bmp.Save(@"C:\Users\andyj\OneDrive\Documents\" + _fileName + "." + _fileType, _fileType);
+                return;
+            }
+            _bmp.Save(_filePath + "\\" + _fileName + "." + _fileType, _fileType);
             this.Close();
         }
 
@@ -51,6 +52,17 @@ namespace Comp_Sci_IA
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             _fileName = textBox1.Text;
+        }
+
+        private void btnOpenFileDialog2_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog openFolder = new FolderBrowserDialog();
+
+            if (openFolder.ShowDialog() == DialogResult.OK)
+            {
+                _filePath = openFolder.SelectedPath;
+                this.txtFileNameImport2.Text = _filePath;
+            }
         }
     }
 }

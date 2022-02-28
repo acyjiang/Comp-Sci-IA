@@ -45,14 +45,12 @@ namespace Comp_Sci_IA
             this.btnExport = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnCrop = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLower)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarUpper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOpenStart
@@ -202,21 +200,12 @@ namespace Comp_Sci_IA
             this.btnCrop.UseVisualStyleBackColor = true;
             this.btnCrop.Click += new System.EventHandler(this.btnCrop_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(1430, 734);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(193, 164);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2174, 1329);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnCrop);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnExport);
@@ -240,7 +229,6 @@ namespace Comp_Sci_IA
             ((System.ComponentModel.ISupportInitialize)(this.trackBarUpper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +250,5 @@ namespace Comp_Sci_IA
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnCrop;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

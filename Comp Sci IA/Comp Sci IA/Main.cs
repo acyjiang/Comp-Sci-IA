@@ -13,8 +13,6 @@ namespace Comp_Sci_IA
 
     public partial class Main : Form
     {
-        public Stack<Image> history;
-        public Bitmap _oImage; //original/current image
         public bool _wantedToReturn;
         public String _fileName;
         public String _folder;
@@ -26,13 +24,11 @@ namespace Comp_Sci_IA
 
         public Main(String _fileName, String _folder, Bitmap _image, bool _previewModeOn)
         {
-            history = new Stack<Image>();
-            this._oImage = _image;
             this._fileName = _fileName;
             this._folder = _folder;
             this._previewModeOn = _previewModeOn;
 
-            _ed = new Editor(_oImage, 400, 400, WINDOWWIDTH / 4, WINDOWHEIGHT / 4);
+            _ed = new Editor(_image, 400, 400, WINDOWWIDTH / 4, WINDOWHEIGHT / 4);
 
             InitializeComponent();
             pictureBox1.Controls.Add(pictureBox2);
@@ -60,6 +56,7 @@ namespace Comp_Sci_IA
             trackBarUpper.Hide();
             trackBarLower.Hide();
             btnCrop.Enabled = false;
+            pictureBox2.Hide();
 
             //Set image
             setImage();
@@ -159,18 +156,26 @@ namespace Comp_Sci_IA
 
         private void pictureBox2_Paint(object sender, PaintEventArgs e)
         {
-            Pen blackPen = new Pen(Color.Black, 3);
+            Pen blackPen = new Pen(Color.Black, 1);
 
             // Create rectangle.
-            Rectangle rect = new Rectangle(0, 0, pictureBox2.Width, pictureBox2.Height);
+            Rectangle rect1 = new Rectangle(0, 0, pictureBox2.Width, pictureBox2.Height);
 
             // Draw rectangle to screen.
-            e.Graphics.DrawRectangle(blackPen, rect);
+            e.Graphics.DrawRectangle(blackPen, rect1);
+
+            Pen whitePen = new Pen(Color.White, 1);
+
+            // Create rectangle.
+            Rectangle rect2 = new Rectangle(1, 1, pictureBox2.Width-4, pictureBox2.Height-4);
+
+            // Draw rectangle to screen.
+            e.Graphics.DrawRectangle(whitePen, rect2);
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            Export export = new Export(_oImage);
+            Export export = new Export(_ed.getImage());
             export.ShowDialog();
         }
 
@@ -180,7 +185,7 @@ namespace Comp_Sci_IA
                (int)(_ed.getScale() * ( trackBarLower.Value - trackBarUpper.Value) ), (int)(_ed.getScale() * (trackBarLeft.Value - trackBarRight.Value)) );
             Console.WriteLine(" " + a.X + " " + a.Y + " " + a.Width+ " " + a.Height);
 
-            _oImage = _oImage.Clone(a, _oImage.PixelFormat);
+            Bitmap _oImage = _ed.getImage().Clone(a, _ed.getImage().PixelFormat);
             _ed.setImage(_oImage);
 
             //Set image
@@ -202,6 +207,7 @@ namespace Comp_Sci_IA
                 trackBarUpper.Show();
                 trackBarLower.Show();
                 btnCrop.Enabled = true;
+                pictureBox2.Show();
             } else
             {
                 _zoomMode = false;
@@ -210,6 +216,7 @@ namespace Comp_Sci_IA
                 trackBarUpper.Hide();
                 trackBarLower.Hide();
                 btnCrop.Enabled = false;
+                pictureBox2.Hide();
             }
             
         }
@@ -217,9 +224,6 @@ namespace Comp_Sci_IA
         private void button1_Click(object sender, EventArgs e)
         {
             _ed.undoHistory();
-            pictureBox3.Image = _ed.getImage();
-            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox3.Refresh();
 
             setImage();
             setZoom();

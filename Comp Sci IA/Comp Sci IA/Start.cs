@@ -40,7 +40,6 @@ namespace Comp_Sci_IA
             tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
             tabControl1.TabPages[0].Text = "Open Recent File";
             tabControl1.TabPages[1].Text = "Import File";
-            tabControl1.TabPages[2].Text = "Help";
 
             btnOpen1.Hide();
         }

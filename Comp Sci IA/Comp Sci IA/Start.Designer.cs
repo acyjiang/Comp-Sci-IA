@@ -42,7 +42,6 @@ namespace Comp_Sci_IA
             this.btnOpenFileDialog2 = new System.Windows.Forms.Button();
             this.txtFileNameImport2 = new System.Windows.Forms.TextBox();
             this.lblUploadFile2 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -77,7 +76,6 @@ namespace Comp_Sci_IA
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.ItemSize = new System.Drawing.Size(40, 200);
             this.tabControl1.Location = new System.Drawing.Point(52, 100);
@@ -216,17 +214,6 @@ namespace Comp_Sci_IA
             this.lblUploadFile2.TabIndex = 13;
             this.lblUploadFile2.Text = "Upload file:";
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(204, 4);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(6);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage4.Size = new System.Drawing.Size(1284, 611);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -261,7 +248,6 @@ namespace Comp_Sci_IA
         private System.Windows.Forms.Button btnOpenFileDialog2;
         private System.Windows.Forms.TextBox txtFileNameImport2;
         private System.Windows.Forms.Label lblUploadFile2;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label lblAcceptableTypes2;
         private System.Windows.Forms.Button btnImport2;
         private System.Windows.Forms.Label lblRecentFiles1;

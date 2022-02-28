@@ -1,0 +1,13 @@
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\bin\Release\Comp Sci IA.exe.config
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\bin\Release\Comp Sci IA.exe
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\bin\Release\Comp Sci IA.pdb
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp Sci IA.csproj.AssemblyReference.cache
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp Sci IA.csproj.SuggestedBindingRedirects.cache
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp_Sci_IA.Export.resources
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp_Sci_IA.Main.resources
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp_Sci_IA.Start.resources
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp_Sci_IA.Properties.Resources.resources
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp Sci IA.csproj.GenerateResource.cache
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp Sci IA.csproj.CoreCompileInputs.cache
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp Sci IA.exe
+C:\Users\andyj\OneDrive\Documents\GitHub\Comp Sci IA\Comp Sci IA\obj\Release\Comp Sci IA.pdb

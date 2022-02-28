@@ -9,9 +9,9 @@ namespace Comp_Sci_IA
 {
     internal class Editor
     {
-        Stack<Image> undo;
-        Stack<Image> redo;
-        Image _image;
+        Stack<Bitmap> undo;
+        Stack<Bitmap> redo;
+        Bitmap _image;
         int _width;
         int _height;
         int _wBound;
@@ -20,7 +20,7 @@ namespace Comp_Sci_IA
         int _cY;
         double _scaleFactor;
 
-        public Editor(Image image, int wBound, int hBound, int cX, int cY)
+        public Editor(Bitmap image, int wBound, int hBound, int cX, int cY)
         {
             _image = image;
             _cX = cX;
@@ -28,16 +28,16 @@ namespace Comp_Sci_IA
             _wBound = wBound;
             _hBound = hBound;
             set_dims();
-            this.undo = new Stack<Image>();
-            this.redo = new Stack<Image>();
+            this.undo = new Stack<Bitmap>();
+            this.redo = new Stack<Bitmap>();
             this.undo.Push(image);
         }
 
-        public void setImage(Image image)
+        public void setImage(Bitmap image)
         {
             this._image = image;
             set_dims();
-            this.undo.Push((Image)image.Clone());
+            this.undo.Push((Bitmap)image.Clone());
             this.redo.Clear();
 
             foreach (Image i in undo)
@@ -77,18 +77,19 @@ namespace Comp_Sci_IA
 
         public double getScale() { return 1/_scaleFactor; }
 
-        public Image getImage() { return _image; }
+        public Bitmap getImage() { return _image; }
 
         public void undoHistory()
         {
-            redo.Push((Image)undo.Pop().Clone());
-            this._image = (Image)undo.Peek().Clone();
+            if (undo.Count < 2) return;
+            redo.Push(undo.Pop());
+            this._image = undo.Peek();
             set_dims();
-            Console.WriteLine(undo.Count + " " + redo.Count);
         }
 
         public void redoHistory()
         {
+            if (redo.Count < 1) return;
             undo.Push(redo.Peek());
             this._image = redo.Pop();
             set_dims();

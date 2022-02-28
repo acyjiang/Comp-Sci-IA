@@ -114,6 +114,7 @@ namespace Comp_Sci_IA
             this.btnOpenFileDialog2.TabIndex = 16;
             this.btnOpenFileDialog2.Text = "...";
             this.btnOpenFileDialog2.UseVisualStyleBackColor = true;
+            this.btnOpenFileDialog2.Click += new System.EventHandler(this.btnOpenFileDialog2_Click);
             // 
             // txtFileNameImport2
             // 
