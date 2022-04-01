@@ -18,7 +18,7 @@ namespace Comp_Sci_IA
         public String _folder;
         public bool _previewModeOn;
         public int WINDOWWIDTH = 2200;
-        public int WINDOWHEIGHT = 1400;
+        public int WINDOWHEIGHT = 1500;
         Editor _ed;
         public bool _zoomMode = false;
 
@@ -43,6 +43,8 @@ namespace Comp_Sci_IA
         private void SetControls()
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.Size = new Size(WINDOWWIDTH/2, WINDOWHEIGHT/2);
+            this.CenterToScreen();
             this.MaximizeBox = true;
             this.MinimizeBox = true;
 
@@ -156,10 +158,10 @@ namespace Comp_Sci_IA
 
         private void pictureBox2_Paint(object sender, PaintEventArgs e)
         {
-            Pen blackPen = new Pen(Color.Black, 1);
+            Pen blackPen = new Pen(Color.Black, 5);
 
             // Create rectangle.
-            Rectangle rect1 = new Rectangle(0, 0, pictureBox2.Width, pictureBox2.Height);
+            Rectangle rect1 = new Rectangle(0, 0, pictureBox2.Width-1, pictureBox2.Height-1);
 
             // Draw rectangle to screen.
             e.Graphics.DrawRectangle(blackPen, rect1);
@@ -167,7 +169,7 @@ namespace Comp_Sci_IA
             Pen whitePen = new Pen(Color.White, 1);
 
             // Create rectangle.
-            Rectangle rect2 = new Rectangle(1, 1, pictureBox2.Width-4, pictureBox2.Height-4);
+            Rectangle rect2 = new Rectangle(2, 2, pictureBox2.Width-5, pictureBox2.Height-5);
 
             // Draw rectangle to screen.
             e.Graphics.DrawRectangle(whitePen, rect2);

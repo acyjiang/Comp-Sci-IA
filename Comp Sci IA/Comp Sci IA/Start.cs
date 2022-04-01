@@ -28,6 +28,7 @@ namespace Comp_Sci_IA
         private void Start_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            this.Size = new Size(1625/2, 1000/2);
             SetControls();
         }
 
